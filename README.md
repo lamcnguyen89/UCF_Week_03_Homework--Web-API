@@ -20,7 +20,7 @@ In this project we created an online quiz that was dynamically generated with Ja
 
 * https://www.youtube.com/watch?v=k8yJCeuP6I8 
 
-* UCF Coding Camp INstructors
+* UCF Coding Camp Instructors
 
 ## License
 

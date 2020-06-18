@@ -127,6 +127,8 @@ let questions = [
 
     function incorrectAnswer() {
         document.getElementById(currentQuestionIndex).style.backgroundColor = "red";
+        //Increment the timer forward if user chooses wrong answer
+        count++;
     }
 
 // Create and display the timer:
