@@ -18,7 +18,9 @@ In this project we created an online quiz that was dynamically generated with Ja
 ## Sources
 * https://www.youtube.com/watch?time_continue=1684&v=49pYIMygIcU&feature=emb_logo
 
-* UCF Coding Camp
+* https://www.youtube.com/watch?v=k8yJCeuP6I8 
+
+* UCF Coding Camp INstructors
 
 ## License
 

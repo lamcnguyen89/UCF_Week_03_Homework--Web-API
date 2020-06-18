@@ -10,6 +10,7 @@ var choiceAEl = document.getElementById("A");
 var choiceBEl = document.getElementById("B");
 var choiceCEl = document.getElementById("C");
 var choiceDEl = document.getElementById("D");
+var scoreboardEl = document.querySelector(".scoreboard");
 
 
 
@@ -168,6 +169,7 @@ let questions = [
             //The score percentage is the value of the score divided by the length of the questions array multipled by 100 and converted to an integer.
         var scorePercent = Math.round(100 * score / questions.length);
         scoreEl.innerHTML += "<p>" + scorePercent +"%</p>";
+        scoreboardEl.style.display = "block";
         
 
     }
@@ -225,7 +227,7 @@ for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
     const value = localStorage.getItem(key);
 
-    lsOutput.innerHTML += `${key}: ${value}<br />`;
+    lsOutput.innerHTML += `${key}: ${value + "%"}<br>`;
 }
 
 
