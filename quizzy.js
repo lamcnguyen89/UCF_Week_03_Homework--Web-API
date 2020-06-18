@@ -168,6 +168,8 @@ let questions = [
             //The score percentage is the value of the score divided by the length of the questions array multipled by 100 and converted to an integer.
         var scorePercent = Math.round(100 * score / questions.length);
         scoreEl.innerHTML += "<p>" + scorePercent +"%</p>";
+        
+
     }
 
 // Check to see whether the answer is correct:
@@ -201,8 +203,39 @@ let questions = [
 
     }
 
-// Event listeners
+// Scripting to store user scores
+
+const inpName = document.getElementById("InputName");
+const inpScore = document.getElementById("quizScore");
+const btnInsert = document.getElementById("buttonInsert");
+const lsOutput = document.getElementById("localStorageOutput")
+
+btnInsert.onclick = function() {
+
+    const yourName = inpName.value;
+    const yourScore = inpScore.value;
+
+    if (yourName && yourScore) {
+        localStorage.setItem(yourName, yourScore);
+        location.reload();
+    }
+};
+
+for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+
+    lsOutput.innerHTML += `${key}: ${value}<br />`;
+}
+
+
+// Event listener
     //click on the div container that says "Click here to Start Quiz!!!!....." to trigger startQuiz function.
     startEl.addEventListener("click", startQuiz);
+
+
+
+
+
 
 

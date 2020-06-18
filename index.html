@@ -38,6 +38,25 @@
 
         <!--We set the display to none so that initially, the score bar does not show up until the start button is pressed-->
         <div class="scoreContainer" style="display: none"></div>
+
+        <!--Where the user's name and score are input and stored in localstorage-->
+        <fieldset>
+            <legend> Insert Name and Score here</legend>
+            <input id="InputName" type="text" placeholder="Enter name here">
+            <input id="quizScore" type="text" placeholder="Score goes here"> 
+            <button type="button" id="buttonInsert">Enter Score</button>        
+        </fieldset>
+
+        <fieldset>
+            <legend>User Scores</legend>
+            <div id="localStorageOutput"></div>
+        </fieldset>
+
+        </div>
+
+
+
+
     </div>
     <script src="quizzy.js"></script>
 </body>
