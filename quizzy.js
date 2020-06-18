@@ -17,45 +17,29 @@ var choiceDEl = document.getElementById("D");
 let questions = [
 
     {
-        question: "Example Question 1?",
-        choiceA: "Correct",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        choiceD: "Wrong",
+        question: "Which of the following is not based on the JavaScript language?",
+        choiceA: "Python",
+        choiceB: "Hypertext Markup Language",
+        choiceC: "Cascading Style Sheets",
+        choiceD: "jQuery",
         correct: "A"
     },
     {
-        question: "Example Question 2?",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
+        question: "What is a valid definition of DOM(Document Object Model?",
+        choiceA: " A database stored server-side that contains information that can be accessed by the user from his/her personal computer.",
+        choiceB: "A method for computers to learn patterns in data through statistical analysis.",
+        choiceC: "A way of specifying how browsers should create a model of an HTML page and how JavaScript can alter that HTML page.",
+        choiceD: "The text that is added to an image for accessibility purposes for vision impaired users",
         correct: "C"
     },
     {
-        question: "Example Question 3?",
-        choiceA: "Correct",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        choiceD: "Wrong",
-        correct: "A"
-    },
-    {
-        question: "Example Question 4?",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        choiceD: "Correct",
+        question: "what does the += operator do or defined by?",
+        choiceA: "x = x + y",
+        choiceB: "'JohnDoe' = 'John' + 'Doe' ",
+        choiceC: " 'What a very nice day' = 'What a " + "very nice day",
+        choiceD: "All the above ",
         correct: "D"
     },
-    {
-        question: "Example Question 5?",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
-        choiceD: "Wrong",
-        correct: "B"
-    }
 
 ];
 
@@ -157,6 +141,7 @@ let questions = [
             // The question is wrong so we run the incorrectAnswer() function.
             incorrectAnswer();
             //check if we have any more questions.
+            // Initially, I carelessly put a <= instead of a < operator. This caused an error because the algorithm tried to increment the index past the last index number on the array to an index number that didn't exist causing an error in the code.... This stuff is really unforgiving.
             if (currentQuestionIndex < lastQuestionIndex) {
                 // Increment question index to move to next question.
                 currentQuestionIndex++;
@@ -201,7 +186,7 @@ let questions = [
 
         count = 0; // set count back to zero for the next question
         
-
+        // Initially, I carelessly put a <= instead of a < operator. This caused an error because the algorithm tried to increment the index past the last index number on the array trying to reach an index item that didn't exist causing an error in the code.... This stuff is really unforgiving.
         if(currentQuestionIndex < lastQuestionIndex) {
             //Increment current question index to move to next question
             currentQuestionIndex++;
