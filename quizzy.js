@@ -1,4 +1,3 @@
-
 // DOMelements:
 
 var startEl = document.querySelector(".start");   
@@ -56,7 +55,7 @@ let questions = [
         choiceC: "Wrong",
         choiceD: "Wrong",
         correct: "B"
-    },
+    }
 
 ];
 
@@ -67,7 +66,7 @@ let questions = [
     // The index number of the current question:
     let currentQuestionIndex = 0;
     // The variable that gives 10 seconds for each question:
-    var questionTime = 10
+    var questionTime = 10;
     // This variable sets the initial value of the counter that shows how much time has elapsed for the question
     let count = 0;
     // renders the timer so that it counts down with the interval of seconds. We call it outside the functions so that any other function can call it and alter it. This is a global variable.
@@ -89,7 +88,7 @@ let questions = [
 
 // To start the quiz:
 
-    function startQuiz() {
+    function startQuiz(){
         // Set the div Container containing text "Click here to Start Quiz!!!!....." to become invisible
         startEl.style.display = "none";
         // Load the first question:
@@ -119,9 +118,8 @@ let questions = [
             choiceDEl.innerHTML = q.choiceD;
 
             //Displays question on the webpage:
-                // q.question is a command that displays a particular piece pf data called "question" stored within the object at a particular index, located within the questions array....
-            questionEl.innerHTML = "<p>" + q.question + "</p>"
-    
+            // q.question is a command that displays a particular piece pf data called "question" stored within the object at a particular index, located within the questions array....
+            questionEl.innerHTML = "<p>" + q.question + "</p>";
         }
 
 // To show the progess of the quiz:
@@ -159,7 +157,7 @@ let questions = [
             // The question is wrong so we run the incorrectAnswer() function.
             incorrectAnswer();
             //check if we have any more questions.
-            if (currentQuestionIndex <= lastQuestionIndex) {
+            if (currentQuestionIndex < lastQuestionIndex) {
                 // Increment question index to move to next question.
                 currentQuestionIndex++;
                 // Render the next question
@@ -183,7 +181,7 @@ let questions = [
         scoreEl.style.display = "block"; 
         // calculate the score percentage:
             //The score percentage is the value of the score divided by the length of the questions array multipled by 100 and converted to an integer.
-        let scorePercent = Math.round(100 * score / questions.length);
+        var scorePercent = Math.round(100 * score / questions.length);
         scoreEl.innerHTML += "<p>" + scorePercent +"%</p>";
     }
 
@@ -191,7 +189,7 @@ let questions = [
 
     function checkSolution(answer) {
 
-        if(questions[currentQuestionIndex].correct == answer) {
+        if(answer == questions[currentQuestionIndex].correct) {
             // Answer is correct. Increment variable named score
             score++;
             // Change progess color to blue showing correct answer
@@ -204,7 +202,7 @@ let questions = [
         count = 0; // set count back to zero for the next question
         
 
-        if(currentQuestionIndex <= lastQuestionIndex) {
+        if(currentQuestionIndex < lastQuestionIndex) {
             //Increment current question index to move to next question
             currentQuestionIndex++;
             //Display question at the current incremented index in the questions array.

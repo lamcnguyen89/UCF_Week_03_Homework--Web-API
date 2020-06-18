@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
-    <link rel="stylesheet" href= "style.css">
+    
 </head>
-
 <body>
-
     <div class="container">
-        <!--The intro class will allow this div container to serve as a button that starts the quiz-->
-        <div class="start"> Click here to Start Quiz!!!...</div>
+
+        <!--The start class will allow this div container to serve as a button that starts the quiz-->
+        <div class="start">Click here to Start Quiz!!!!...</div>
 
         <!--We set the display to none so that initially, the quiz questions do not show up until the start button is pressed-->
-        <div class="quizBody" style="display:none">
-
+        <div class="quizbody" style="display: none">
+            
             <!--Questions go here-->
-            <div class= "question"></div>
+            <div class="question"></div>
 
-            <!--onclick is a javascript event that when a button on the webpage is clicked, a JavaScript function is executed-->
             <div class="choices">
+                <!--onclick is a javascript event that when a button on the webpage is clicked, a JavaScript function is executed-->
                 <div class="choice" id="A" onclick="checkSolution('A')"></div>
                 <div class="choice" id="B" onclick="checkSolution('B')"></div>
                 <div class="choice" id="C" onclick="checkSolution('C')"></div>
@@ -28,18 +27,33 @@
             </div>
 
             <!--Timer goes here-->
-            <div class= "timer">
-                <div class= "counter"> </div>
+            <div class="timer">
+                <div class="counter"></div>
             </div>
 
             <!--Progress Bar-->
-            <div class= "progress"></div>
+            <div class="progress"></div>
+
         </div>
 
         <!--We set the display to none so that initially, the score bar does not show up until the start button is pressed-->
-        <div class="scoreContainer" style="display:none"></div>
+        <div class="scoreContainer" style="display: none"></div>
     </div>
-
-<script src="quizzy.js"></script>
+    <script src="quizzy.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
