@@ -25,3 +25,8 @@ In this project we created an online quiz that was dynamically generated with Ja
 ## License
 
 There is no license with this homework assignment
+
+## Screenshots
+
+![](/Assets/Screenshot.PNG)
+![](/Assets/Screenshot_02.PNG)

@@ -168,7 +168,7 @@ let questions = [
         // calculate the score percentage:
             //The score percentage is the value of the score divided by the length of the questions array multipled by 100 and converted to an integer.
         var scorePercent = Math.round(100 * score / questions.length);
-        scoreEl.innerHTML += "<p>" + scorePercent +"%</p>";
+        scoreEl.innerHTML += "<p>" +"Your Quiz Score: " + scorePercent +"%</p>";
         scoreboardEl.style.display = "block";
         
 
